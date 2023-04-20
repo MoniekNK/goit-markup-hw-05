@@ -625,19 +625,29 @@ body {
 
 /*OFFER*/
 
-.photo-list {
+.project-photo {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
   gap: 30px;
 }
 
-.photo-item {
-  display: block;
-}
-
-.project-photo {
+.overlay-box {
   position: relative;
+  overflow: hidden;
+  width: 370px;
+  height: 294px;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-background-color);
+  color: var(--text-tertiary-color);
+  transform: translateY(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-photo:hover,
@@ -647,43 +657,14 @@ body {
   cursor: pointer;
 }
 
-.overlay-list {
-  position: relative;
-  overflow: hidden;
-  width: 370px;
-  height: 294px;
-}
 .photo-border {
+  display: flex;
+  flex-direction: column;
   letter-spacing: 0.06em;
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
 }
-
-.overlay {
-  background-color: var(--overlay-background-color);
-  color: var(--text-tertiary-color);
-  position: absolute;
-  left: 0;
-  top: 294px;
-  padding: 49px 45px 49px 24px;
-  width: 100%;
-  height: 294px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.03em;
-  transform: translateY(0);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay-list:hover,
-.overlay:hover {
-  transform: translateY(-100%);
-}
-
 .photo-header {
   font-size: 18px;
   font-weight: 700;
