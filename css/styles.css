@@ -632,6 +632,9 @@ body {
   gap: 30px;
 }
 
+.photo-item {
+  display: block;
+}
 .project-photo {
   position: relative;
   overflow: hidden;
@@ -654,16 +657,6 @@ body {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.overlay {
-  position: absolute;
-  width: 370px;
-  height: 294px;
-  overflow: hidden;
-}
-
-.overlay .overlay-box:hover {
-  transform: translateY(-100%);
 }
 
 .project-photo:hover,
