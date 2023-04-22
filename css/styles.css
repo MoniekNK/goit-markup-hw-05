@@ -152,7 +152,7 @@ body {
   position: absolute;
   bottom: 0;
   height: 4px;
-  width: 53px;
+  width: 58px;
   border-radius: 2px;
 }
 /* CONTACT */
@@ -643,6 +643,8 @@ body {
 
 .overlay-container {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   width: 370px;
   height: 294px;
@@ -653,12 +655,14 @@ body {
 }
 .overlay {
   position: absolute;
-  top: 294px;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0.9;
   background-color: var(--overlay-background-color);
-  transform: translateY(0);
+  transition-property: transform;
+  transform: translateY(100%);
   transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -673,7 +677,7 @@ body {
 }
 
 .overlay-container:hover .overlay {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .photo-border {
